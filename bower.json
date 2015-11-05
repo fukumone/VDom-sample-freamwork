@@ -10,6 +10,7 @@
     "tests"
   ],
   "dependencies": {
-    "react-bower": "git@github.com:reactjs/react-bower.git"
+    "react": "git@github.com:reactjs/react-bower.git",
+    "react-router": "git@github.com:rackt/react-router.git"
   }
 }

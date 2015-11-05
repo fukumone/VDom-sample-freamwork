@@ -1,4 +1,5 @@
 //= require jquery
 //= require jquery_ujs
-//= require react-bower
+//= require react
+//= require react-router
 //= require_tree .
