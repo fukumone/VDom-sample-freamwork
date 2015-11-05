@@ -23,6 +23,3 @@
 .DS_Store
 
 npm-debug.log
-
-# Ignore files managed by Bower
-vendor/assets/bower_components

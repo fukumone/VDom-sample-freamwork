@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "react-sample",
   "license": "MIT",
+  "dependencies": {
+    "browserify": "^12.0.1",
+    "browserify-incremental": "^3.0.1"
+  },
   "devDependencies": {
     "babel": "^5.8.23",
     "babel-plugin-espower": "^1.0.0",
@@ -10,7 +14,10 @@
     "chai-as-promised": "^5.1.0",
     "mocha": "^2.3.3",
     "power-assert": "^1.1.0",
-    "protractor": "^2.4.0"
+    "protractor": "^2.4.0",
+    "react": "^0.14.2",
+    "react-dom": "^0.14.2",
+    "react-router": "^1.0.0-rc4"
   },
   "scripts": {
     "postinstall": "webdriver-manager update",
