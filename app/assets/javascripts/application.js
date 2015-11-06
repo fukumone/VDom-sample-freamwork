@@ -1,3 +1,8 @@
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+
+window.onload = function() {
+  React = require('react')
+  ReactDom = require('react-dom')
+  require('./articles.es6')
+}
