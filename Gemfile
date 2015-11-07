@@ -12,8 +12,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # js
 gem 'jquery-rails'
 gem 'sprockets', '>= 3.0.0'
-gem 'sprockets-es6'
+gem 'sprockets-es6', require: 'sprockets/es6'
 gem 'browserify-rails'
+gem 'react-rails', '~> 1.4.0'
+gem 'react-router-rails', '~>0.13.3.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,6 +1,7 @@
 //= require jquery
 //= require jquery_ujs
-
-window.onload = function() {
-  require('./components/articles.es6')
-}
+//= require react
+//= require react_ujs
+//= require react_router
+//= require_tree ./components
+//= require_tree .
