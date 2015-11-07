@@ -3,20 +3,22 @@ source 'https://rubygems.org'
 ruby '2.2.3'
 
 gem 'rails', '4.2.4'
-gem 'sqlite3'
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'kaminari'
 
-# js
+# assets
+gem 'sass-rails', '~> 5.0'
+gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'sprockets', '>= 3.0.0'
 gem 'sprockets-es6', require: 'sprockets/es6'
 gem 'browserify-rails'
 gem 'react-rails', '~> 1.4.0'
 gem 'react-router-rails', '~>0.13.3.1'
+
+# DB
+gem 'sqlite3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
