@@ -23,12 +23,8 @@ module ReactSample
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
-    # jsx設定
-    config.react.jsx_transformer_class = React::JSX::JSXTransformer
-    config.react.jsx_transform_options = {
-      blacklist: ['spec.functionName', 'validation.react'], # default options
-      optional: ["transformerName"],  # pass extra babel options
-      whitelist: ["useStrict"] # even more options
-    }
+    # React
+    config.react.jsx_transform_options = { harmony: true }
+    config.react.addons = true
   end
 end
