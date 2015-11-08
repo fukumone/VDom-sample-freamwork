@@ -15,3 +15,13 @@
 /log/*
 !/log/.keep
 /tmp
+
+# js
+/node_modules
+
+# Mac
+.DS_Store
+
+npm-debug.log
+
+.ruby-version

@@ -1,0 +1,14 @@
+{
+  "name": "capejs-sample",
+  "version": "1.0.0",
+  "description": "capejs-sample",
+  "license": "MIT",
+  "devDependencies": {
+    "capejs": "1.3.0-alpha.2",
+    "babel": "^5.8.23",
+    "babel-plugin-espower": "^1.0.0",
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "browserify-incremental": "^3.0.1"
+  }
+}
