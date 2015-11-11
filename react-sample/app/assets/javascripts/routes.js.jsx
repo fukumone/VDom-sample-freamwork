@@ -23,7 +23,7 @@ class Articles extends React.Component {
         }
     }
     render() {
-        var flash
+        let flash
         if (this.state.flash) {
             flash = (
                 <div className="alert alert-success">
@@ -44,14 +44,13 @@ class Articles extends React.Component {
 }
 
 $(() => {
-    var routes = (
+    let routes = (
         <ReactRouter.Route path="/articles/?" handler={Articles}>
             <ReactRouter.DefaultRoute name="index" handler={ArticleIndex}/>
             <ReactRouter.Route name="new" handler={ArticleNew}/>
         </ReactRouter.Route>
     )
     ReactRouter.run(routes, ReactRouter.HistoryLocation, (Handler, state) => {
-        console.log(state)
         ReactDOM.render(<Handler {...state}/>, document.getElementById('main'))
     })
 })

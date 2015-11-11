@@ -8,7 +8,7 @@ class ArticleForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault()
 
-        var params = {}
+        let params = {}
         Object.keys(this.refs).forEach((key) => {
             params[key] = React.findDOMNode(this.refs[key]).value
         })
@@ -28,8 +28,8 @@ class ArticleForm extends React.Component {
         })
     }
     render() {
-        var article = this.props.article
-        var alerts
+        let article = this.props.article
+        let alerts
         if (this.state.alerts.length > 0) {
             alerts = (
                 <div className="alert alert-danger">
