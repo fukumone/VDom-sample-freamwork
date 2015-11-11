@@ -1,5 +1,6 @@
 class Articles extends React.Component {
     constructor() {
+        super()
         this.state = {
             flash: null,
             flashShown: false
@@ -44,14 +45,16 @@ class Articles extends React.Component {
 
 $(() => {
     var routes = (
-        <ReactRouter.Route path="/Articles/?" handler={Articles}>
+        <ReactRouter.Route path="/articles/?" handler={Articles}>
             <ReactRouter.DefaultRoute name="index" handler={ArticleIndex}/>
-            <ReactRouter.Route name="new" handler={ArticleNew}/>
-            <ReactRouter.Route name="show" path="/articles/:id" handler={ArticleShow}/>
-            <ReactRouter.Route name="edit" path="/articles/:id/edit" handler={ArticleEdit}/>
         </ReactRouter.Route>
     )
     ReactRouter.run(routes, ReactRouter.HistoryLocation, (Handler, state) => {
-        React.render(<Handler {...state}/>, document.getElementById('main'))
+        console.log(state)
+        ReactDOM.render(<Handler {...state}/>, document.getElementById('main'))
     })
 })
+
+// <ReactRouter.Route name="new" handler={ArticleNew}/>
+// <ReactRouter.Route name="show" path="/articles/:id" handler={ArticleShow}/>
+// <ReactRouter.Route name="edit" path="/articles/:id/edit" handler={ArticleEdit}/>
