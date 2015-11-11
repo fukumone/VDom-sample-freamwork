@@ -28,6 +28,7 @@ class ArticleIndex extends React.Component {
                 <h1>Listing Articles</h1>
                 <ArticleIndexTable articles={this.state.articles} updateFlash={this.props.updateFlash} reloadArticles={this.reloadArticles.bind(this)}/>
                 <br/>
+                <ReactRouter.Link to="new" className="btn btn-default">New</ReactRouter.Link>
             </div>
         )
     }
