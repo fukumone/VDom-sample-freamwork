@@ -1,47 +1,47 @@
-class BookIndex extends React.Component {
+class ArticleIndex extends React.Component {
     constructor() {
         this.state = {
-            books: [],
+            articles: [],
             pagination: {}
-        };
+        }
     }
-    reloadBooks(query) {
+    reloadArticles(query) {
         $.ajax({
-            url: '/books.json',
+            url: '/articles.json',
             data: query || this.props.query,
             success: (result) => {
                 this.setState({
-                    books: result.books,
+                    articles: result.articles,
                     pagination: result.pagination
-                });
+                })
             }
-        });
+        })
     }
     componentWillReceiveProps(nextProps) {
-        this.reloadBooks(nextProps.query)
+        this.reloadArticles(nextProps.query)
     }
     componentDidMount() {
-        this.reloadBooks();
+        this.reloadArticles()
     }
     render() {
-        var info;
+        var info
         if (this.state.pagination.total_count) {
-            info = <p>{this.state.pagination.offset_value + 1} - {this.state.pagination.offset_value + this.state.books.length} of {this.state.pagination.total_count}</p>;
+            info = <p>{this.state.pagination.offset_value + 1} - {this.state.pagination.offset_value + this.state.articles.length} of {this.state.pagination.total_count}</p>
         }
         return (
             <div>
-                <h1>Listing Books</h1>
+                <h1>Listing Articles</h1>
                 {info}
-                <BookIndexTable books={this.state.books} updateFlash={this.props.updateFlash} reloadBooks={this.reloadBooks.bind(this)}/>
+                <ArticleIndexTable articles={this.state.articles} updateFlash={this.props.updateFlash} reloadArticles={this.reloadArticles.bind(this)}/>
                 <Pagination {...this.state.pagination}/>
                 <br/>
                 <ReactRouter.Link to="new" className="btn btn-default">New</ReactRouter.Link>
             </div>
-        );
+        )
     }
 }
 
-class BookIndexTable extends React.Component {
+class ArticleIndexTable extends React.Component {
     render() {
         return (
             <table className="table">
@@ -56,40 +56,40 @@ class BookIndexTable extends React.Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {this.props.books.map((book, i) => <BookIndexTableRow key={i} book={book} updateFlash={this.props.updateFlash} reloadBooks={this.props.reloadBooks}/>)}
+                    {this.props.articles.map((article, i) => <ArticleIndexTableRow key={i} article={article} updateFlash={this.props.updateFlash} reloadArticles={this.props.reloadArticles}/>)}
                 </tbody>
             </table>
-        );
+        )
     }
 }
 
-class BookIndexTableRow extends React.Component {
+class ArticleIndexTableRow extends React.Component {
     handleClickDestroy(url, e) {
-        e.preventDefault();
+        e.preventDefault()
         if (! confirm('Are you sure?')) {
-            return;
+            return
         }
         $.ajax({
             url: url,
             method: 'DELETE',
             success: (result) => {
-                this.props.updateFlash(result.notice);
-                this.props.reloadBooks();
+                this.props.updateFlash(result.notice)
+                this.props.reloadArticles()
             }
         })
     }
     render() {
         return (
             <tr>
-                <td>{this.props.book.id}</td>
-                <td>{this.props.book.title}</td>
-                <td>{this.props.book.price}</td>
-                <td>{this.props.book.created_at}</td>
-                <td>{this.props.book.updated_at}</td>
-                <td><ReactRouter.Link to="show" params={{ id: this.props.book.id }}>Show</ReactRouter.Link></td>
-                <td><ReactRouter.Link to="edit" params={{ id: this.props.book.id }}>Edit</ReactRouter.Link></td>
-                <td><a href="" onClick={this.handleClickDestroy.bind(this, this.props.book.url)}>Destroy</a></td>
+                <td>{this.props.article.id}</td>
+                <td>{this.props.article.title}</td>
+                <td>{this.props.article.price}</td>
+                <td>{this.props.article.created_at}</td>
+                <td>{this.props.article.updated_at}</td>
+                <td><ReactRouter.Link to="show" params={{ id: this.props.article.id }}>Show</ReactRouter.Link></td>
+                <td><ReactRouter.Link to="edit" params={{ id: this.props.article.id }}>Edit</ReactRouter.Link></td>
+                <td><a href="" onClick={this.handleClickDestroy.bind(this, this.props.article.url)}>Destroy</a></td>
             </tr>
-        );
+        )
     }
 }
