@@ -48,12 +48,10 @@ $(() => {
         <ReactRouter.Route path="/articles/?" handler={Articles}>
             <ReactRouter.DefaultRoute name="index" handler={ArticleIndex}/>
             <ReactRouter.Route name="new" handler={ArticleNew}/>
+            <ReactRouter.Route name="show" path="/articles/:id" handler={ArticleShow}/>
         </ReactRouter.Route>
     )
     ReactRouter.run(routes, ReactRouter.HistoryLocation, (Handler, state) => {
         ReactDOM.render(<Handler {...state}/>, document.getElementById('main'))
     })
 })
-
-// <ReactRouter.Route name="show" path="/articles/:id" handler={ArticleShow}/>
-// <ReactRouter.Route name="edit" path="/articles/:id/edit" handler={ArticleEdit}/>

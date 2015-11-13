@@ -65,6 +65,7 @@ class ArticleIndexTableRow extends React.Component {
                 <td>{this.props.article.body}</td>
                 <td>{this.props.article.created_at}</td>
                 <td>{this.props.article.updated_at}</td>
+                <td><ReactRouter.Link to="show" params={{ id: this.props.article.id }}>Show</ReactRouter.Link></td>
             </tr>
         )
     }

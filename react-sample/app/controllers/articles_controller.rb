@@ -22,6 +22,16 @@ class ArticlesController < ApplicationController
     end
   end
 
+  # GET /articless/1
+  # GET /articless/1.json
+  def show
+    @article = Article.find(params[:id])
+    respond_to do |format|
+      format.html { render :index }
+      format.json { @article }
+    end
+  end
+
   private
     def article_params
       params.require(:article).permit(:name, :body)
