@@ -22,6 +22,21 @@ class ArticlesController < ApplicationController
     end
   end
 
+  # GET /articles/1/edit
+  def edit
+    render :index
+  end
+
+  # PATCH/PUT /articles/1
+  # PATCH/PUT /articles/1.json
+  def update
+    if @article.update(book_params)
+      render json: { notice: 'Book was successfully updated.', location: book_path(@article) }, status: :ok
+    else
+      render json: @article.errors.full_messages, status: :unprocessable_entity
+    end
+  end
+
   # GET /articless/1
   # GET /articless/1.json
   def show
