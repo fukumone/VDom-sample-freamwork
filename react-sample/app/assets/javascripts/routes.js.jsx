@@ -48,7 +48,7 @@ $(() => {
         <ReactRouter.Route path="/articles/?" handler={Articles}>
             <ReactRouter.DefaultRoute name="index" handler={ArticleIndex}/>
             <ReactRouter.Route name="new" handler={ArticleNew}/>
-            <ReactRouter.Route name="edit" handler={ArticleEdit}/>
+            <ReactRouter.Route name="edit" path="/articles/:id/edit" handler={ArticleEdit}/>
             <ReactRouter.Route name="show" path="/articles/:id" handler={ArticleShow}/>
         </ReactRouter.Route>
     )

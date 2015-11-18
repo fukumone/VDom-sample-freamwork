@@ -21,7 +21,6 @@ class ArticleEdit extends React.Component {
             <div>
                 <h1>Editing Article</h1>
                 {form}
-                <ReactRouter.Link to="show" params={{ id: this.props.params.id }} className="btn btn-link">Show</ReactRouter.Link>
                 <ReactRouter.Link to="index" className="btn btn-link">Back</ReactRouter.Link>
             </div>
         )

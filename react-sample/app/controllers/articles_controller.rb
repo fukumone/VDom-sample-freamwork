@@ -30,17 +30,20 @@ class ArticlesController < ApplicationController
   # PATCH/PUT /articles/1
   # PATCH/PUT /articles/1.json
   def update
-    if @article.update(book_params)
-      render json: { notice: 'Book was successfully updated.', location: book_path(@article) }, status: :ok
+    @article = Article.find(params[:id])
+
+    if @article.update(article_params)
+      render json: { notice: 'Article was successfully updated.', location: article_path(@article) }, status: :ok
     else
       render json: @article.errors.full_messages, status: :unprocessable_entity
     end
   end
 
-  # GET /articless/1
-  # GET /articless/1.json
+  # GET /articles/1
+  # GET /articles/1.json
   def show
     @article = Article.find(params[:id])
+
     respond_to do |format|
       format.html { render :index }
       format.json { @article }
