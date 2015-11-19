@@ -16,27 +16,29 @@ class ArticleShow extends React.Component {
     }
     render() {
         return (
-             <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Body</th>
-                        <th>Created</th>
-                        <th>Updated</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>{this.state.article.id}</td>
-                        <td>{this.state.article.name}</td>
-                        <td>{this.state.article.body}</td>
-                        <td>{this.state.article.created_at}</td>
-                        <td>{this.state.article.updated_at}</td>
-                    </tr>
-                </tbody>
+            <div>
+                 <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Body</th>
+                            <th>Created</th>
+                            <th>Updated</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{this.state.article.id}</td>
+                            <td>{this.state.article.name}</td>
+                            <td>{this.state.article.body}</td>
+                            <td>{this.state.article.created_at}</td>
+                            <td>{this.state.article.updated_at}</td>
+                        </tr>
+                    </tbody>
+                </table>
                 <ReactRouter.Link to="index">Back</ReactRouter.Link>
-            </table>
+            </div>
         )
     }
 }
