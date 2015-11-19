@@ -1,0 +1,11 @@
+.title {
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    color: black;
+  }
+  a {
+    color: black;
+  }
+}

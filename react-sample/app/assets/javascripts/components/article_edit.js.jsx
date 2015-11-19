@@ -21,7 +21,7 @@ class ArticleEdit extends React.Component {
             <div>
                 <h1>Editing Article</h1>
                 {form}
-                <ReactRouter.Link to="index" className="btn btn-link">Back</ReactRouter.Link>
+                <ReactRouter.Link to="index" className="btn btn-default">Back</ReactRouter.Link>
             </div>
         )
     }

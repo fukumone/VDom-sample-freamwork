@@ -37,7 +37,7 @@ class ArticleShow extends React.Component {
                         </tr>
                     </tbody>
                 </table>
-                <ReactRouter.Link to="index">Back</ReactRouter.Link>
+                <ReactRouter.Link to="index" className="btn btn-default">Back</ReactRouter.Link>
             </div>
         )
     }
