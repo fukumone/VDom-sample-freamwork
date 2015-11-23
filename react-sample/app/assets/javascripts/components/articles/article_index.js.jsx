@@ -25,10 +25,9 @@ class ArticleIndex extends React.Component {
     render() {
         return (
             <div>
-                <h1>Listing Articles</h1>
+                <ReactRouter.Link to="index" className="title"><h1>Listing Articles</h1></ReactRouter.Link>
+                <ReactRouter.Link to="new" className="btn btn-default">新規作成</ReactRouter.Link>
                 <ArticleIndexTable articles={this.state.articles} updateFlash={this.props.updateFlash} reloadArticles={this.reloadArticles.bind(this)}/>
-                <br/>
-                <ReactRouter.Link to="new" className="btn btn-default">New</ReactRouter.Link>
             </div>
         )
     }

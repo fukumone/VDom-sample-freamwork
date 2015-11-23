@@ -17,22 +17,27 @@ class ArticleShow extends React.Component {
     render() {
         return (
             <div>
-                 <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Body</th>
-                            <th>Created</th>
-                            <th>Updated</th>
-                        </tr>
-                    </thead>
+                <h1>Show Article</h1>
+                <table>
                     <tbody>
                         <tr>
+                            <th>ID</th>
                             <td>{this.state.article.id}</td>
+                        </tr>
+                        <tr>
+                            <th>Name</th>
                             <td>{this.state.article.name}</td>
+                        </tr>
+                        <tr>
+                            <th>Body</th>
                             <td>{this.state.article.body}</td>
+                        </tr>
+                        <tr>
+                            <th>Created</th>
                             <td>{this.state.article.created_at}</td>
+                        </tr>
+                        <tr>
+                            <th>Updated</th>
                             <td>{this.state.article.updated_at}</td>
                         </tr>
                     </tbody>

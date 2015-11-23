@@ -1,11 +1,16 @@
+body {
+  padding-left: 20px;
+}
+
 .title {
-  a {
-    text-decoration: none;
-  }
-  a:hover {
-    color: black;
-  }
-  a {
-    color: black;
-  }
+  text-decoration: none;
+  color: black;
+}
+
+table.table {
+  width: 500px;
+}
+
+form {
+  width: 500px;
 }
