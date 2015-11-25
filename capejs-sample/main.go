@@ -8,7 +8,7 @@ func main() {
     r := gin.Default()
     r.LoadHTMLGlob("templates/*")
     r.GET("/", func(c *gin.Context) {
-        c.HTML(200, "index.tmpl", obj)
+        c.HTML(200, "index.tmpl", "")
     })
 
     // Listen and server on 0.0.0.0:8080
