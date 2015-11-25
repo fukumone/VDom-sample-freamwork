@@ -1,11 +1,16 @@
 package main
 
 import (
-	_ "github.com/t-fukui/capejs-sample/routers"
-	"github.com/astaxie/beego"
-)
+    "github.com/gin-gonic/gin"
+ )
 
 func main() {
-	beego.Run()
-}
+    r := gin.Default()
+    r.LoadHTMLGlob("templates/*")
+    r.GET("/", func(c *gin.Context) {
+        c.HTML(200, "index.tmpl", obj)
+    })
 
+    // Listen and server on 0.0.0.0:8080
+    r.Run(":8080")
+}
