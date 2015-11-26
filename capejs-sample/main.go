@@ -6,6 +6,7 @@ import (
 
 func main() {
     r := gin.Default()
+    r.Static("/assets","assets")
     r.LoadHTMLGlob("templates/*")
     r.GET("/", func(c *gin.Context) {
         c.HTML(200, "index.tmpl", "")
