@@ -1,7 +1,7 @@
 {
-  "name": "capejs-sample",
+  "name": "rails-react-sample",
   "version": "1.0.0",
-  "description": "capejes-sample",
+  "description": "rails-react-sample",
   "license": "MIT",
   "devDependencies": {
     "babel": "^5.8.23",
@@ -13,8 +13,7 @@
     "chai-as-promised": "^5.1.0",
     "mocha": "^2.3.3",
     "power-assert": "^1.1.0",
-    "protractor": "^2.4.0",
-    "webpack": "^1.12.9"
+    "protractor": "^2.4.0"
   },
   "scripts": {
     "postinstall": "webdriver-manager update",
