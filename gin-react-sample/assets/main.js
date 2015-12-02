@@ -1,20 +1,17 @@
-var React = require('react')
-var ReactDOM = require('react-dom')
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-console.log(React)
-console.log(ReactDOM)
-
-var CommentBox = React.createClass({
+const CommentBox = React.createClass({
   render: function() {
     return (
       <div>
-        Hello, world! I am a CommentBox.
+        Hello, GinReactSample!.
       </div>
     );
   }
 });
 
 ReactDOM.render(
-    <CommentBox />,
-    document.getElementById('main')
+  <CommentBox />,
+  document.getElementById('main')
 );
