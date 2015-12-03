@@ -56,19 +56,63 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var CommentBox = _react2.default.createClass({
-	  displayName: 'CommentBox',
+	var ArticleForm = _react2.default.createClass({
+	  displayName: 'ArticleForm',
 
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
 	      null,
-	      'Hello, GinReactSample!.'
+	      _react2.default.createElement(
+	        'form',
+	        { className: 'form-horizontal' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'form-group' },
+	          _react2.default.createElement(
+	            'label',
+	            { className: 'col-sm-2 control-label' },
+	            'Title'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-sm-10' },
+	            _react2.default.createElement('input', { ref: 'name', className: 'form-control' })
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'form-group' },
+	          _react2.default.createElement(
+	            'label',
+	            { className: 'col-sm-2 control-label' },
+	            'Price'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-sm-10' },
+	            _react2.default.createElement('input', { ref: 'body', className: 'form-control' })
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'form-group' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-sm-offset-2 col-sm-10' },
+	            _react2.default.createElement(
+	              'button',
+	              { className: 'btn btn-primary' },
+	              '更新'
+	            )
+	          )
+	        )
+	      )
 	    );
 	  }
 	});
 
-	_reactDom2.default.render(_react2.default.createElement(CommentBox, null), document.getElementById('main'));
+	_reactDom2.default.render(_react2.default.createElement(ArticleForm, null), document.getElementById('main'));
 
 /***/ },
 /* 1 */
