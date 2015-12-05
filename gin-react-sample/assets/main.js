@@ -1,5 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+let data = [
+  {title: "hoge", body: "This is one comment"},
+  {title: "hoge", body: "This is *another* comment"}
+]
 
 const ArticleForm = React.createClass({
   render: function() {
@@ -13,7 +18,7 @@ const ArticleForm = React.createClass({
             </div>
           </div>
           <div className="form-group">
-            <label className="col-sm-2 control-label">Price</label>
+            <label className="col-sm-2 control-label">Body</label>
             <div className="col-sm-10">
               <input ref="body" className="form-control"/>
             </div>
@@ -25,11 +30,27 @@ const ArticleForm = React.createClass({
           </div>
         </form>
       </div>
-    );
+    )
   }
-});
+})
+
+const ArticleList = React.createClass({
+  render: function() {
+    return (
+
+    )
+  }
+})
+
+const ArticleBox = React.createClass({
+  render: function() {
+    return (
+
+    )
+  }
+})
 
 ReactDOM.render(
   <ArticleForm />,
   document.getElementById('main')
-);
+)
