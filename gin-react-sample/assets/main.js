@@ -42,6 +42,20 @@ const ArticleList = React.createClass({
   }
 })
 
+const Article = React.createClass({
+  render: function() {
+    return (
+      <div>
+        <h2>
+          {this.props.title}
+        </h2>
+        {this.props.children}
+      </div>
+    );
+  }
+});
+
+
 const ArticleBox = React.createClass({
   render: function() {
     return (
