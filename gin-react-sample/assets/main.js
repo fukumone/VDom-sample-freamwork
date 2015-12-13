@@ -11,11 +11,17 @@ const ArticleForm = React.createClass({
     return (
       <div>
         <h1>Gin React Sample</h1>
-        <form className="form-horizontal">
+        <form className="form-horizontal" method="post">
+          <div className="form-group">
+            <label className="col-sm-2 control-label">Name</label>
+            <div className="col-sm-10">
+              <input ref="name" className="form-control"/>
+            </div>
+          </div>
           <div className="form-group">
             <label className="col-sm-2 control-label">Title</label>
             <div className="col-sm-10">
-              <input ref="name" className="form-control"/>
+              <input ref="title" className="form-control"/>
             </div>
           </div>
           <div className="form-group">

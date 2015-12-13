@@ -72,7 +72,21 @@
 	      ),
 	      _react2.default.createElement(
 	        'form',
-	        { className: 'form-horizontal' },
+	        { className: 'form-horizontal', method: 'post' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'form-group' },
+	          _react2.default.createElement(
+	            'label',
+	            { className: 'col-sm-2 control-label' },
+	            'Name'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-sm-10' },
+	            _react2.default.createElement('input', { ref: 'name', className: 'form-control' })
+	          )
+	        ),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'form-group' },
@@ -84,7 +98,7 @@
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'col-sm-10' },
-	            _react2.default.createElement('input', { ref: 'name', className: 'form-control' })
+	            _react2.default.createElement('input', { ref: 'title', className: 'form-control' })
 	          )
 	        ),
 	        _react2.default.createElement(
