@@ -27,3 +27,5 @@ npm-debug.log
 .ruby-version
 
 _vendor/
+
+.env*
