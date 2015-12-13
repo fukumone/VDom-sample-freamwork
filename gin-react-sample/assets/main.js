@@ -1,11 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-let data = [
-  {title: "hoge", body: "This is one comment"},
-  {title: "hoge", body: "This is *another* comment"}
-]
-
 const ArticleForm = React.createClass({
   render: function() {
     return (
@@ -32,7 +27,7 @@ const ArticleForm = React.createClass({
           </div>
           <div className="form-group">
             <div className="col-sm-offset-2 col-sm-10">
-              <button className="btn btn-primary">更新</button>
+              <button className="btn btn-primary">作成</button>
             </div>
           </div>
         </form>

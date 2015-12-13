@@ -56,8 +56,6 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var data = [{ title: "hoge", body: "This is one comment" }, { title: "hoge", body: "This is *another* comment" }];
-
 	var ArticleForm = _react2.default.createClass({
 	  displayName: 'ArticleForm',
 
@@ -124,7 +122,7 @@
 	            _react2.default.createElement(
 	              'button',
 	              { className: 'btn btn-primary' },
-	              '更新'
+	              '作成'
 	            )
 	          )
 	        )
