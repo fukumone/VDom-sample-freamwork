@@ -72,7 +72,7 @@
 	      ),
 	      _react2.default.createElement(
 	        'form',
-	        { className: 'form-horizontal', method: 'post' },
+	        { className: 'form-horizontal', action: '/article', method: 'post' },
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'form-group' },
