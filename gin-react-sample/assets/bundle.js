@@ -56,6 +56,8 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var data = [{ title: "hoge", body: "This is one comment" }, { title: "hoge", body: "This is *another* comment" }];
+
 	var ArticleForm = _react2.default.createClass({
 	  displayName: 'ArticleForm',
 
@@ -63,6 +65,11 @@
 	    return _react2.default.createElement(
 	      'div',
 	      null,
+	      _react2.default.createElement(
+	        'h1',
+	        null,
+	        'Gin React Sample'
+	      ),
 	      _react2.default.createElement(
 	        'form',
 	        { className: 'form-horizontal' },
@@ -86,7 +93,7 @@
 	          _react2.default.createElement(
 	            'label',
 	            { className: 'col-sm-2 control-label' },
-	            'Price'
+	            'Body'
 	          ),
 	          _react2.default.createElement(
 	            'div',
@@ -111,6 +118,35 @@
 	    );
 	  }
 	});
+
+	// const ArticleList = React.createClass({
+	//   render: function() {
+	//     return (
+
+	//     )
+	//   }
+	// })
+
+	// const Article = React.createClass({
+	//   render: function() {
+	//     return (
+	//       <div>
+	//         <h2>
+	//           {this.props.title}
+	//         </h2>
+	//         {this.props.children}
+	//       </div>
+	//     );
+	//   }
+	// });
+
+	// const ArticleBox = React.createClass({
+	//   render: function() {
+	//     return (
+
+	//     )
+	//   }
+	// })
 
 	_reactDom2.default.render(_react2.default.createElement(ArticleForm, null), document.getElementById('main'));
 

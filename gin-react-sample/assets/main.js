@@ -10,6 +10,7 @@ const ArticleForm = React.createClass({
   render: function() {
     return (
       <div>
+        <h1>Gin React Sample</h1>
         <form className="form-horizontal">
           <div className="form-group">
             <label className="col-sm-2 control-label">Title</label>
@@ -34,35 +35,35 @@ const ArticleForm = React.createClass({
   }
 })
 
-const ArticleList = React.createClass({
-  render: function() {
-    return (
+// const ArticleList = React.createClass({
+//   render: function() {
+//     return (
 
-    )
-  }
-})
+//     )
+//   }
+// })
 
-const Article = React.createClass({
-  render: function() {
-    return (
-      <div>
-        <h2>
-          {this.props.title}
-        </h2>
-        {this.props.children}
-      </div>
-    );
-  }
-});
+// const Article = React.createClass({
+//   render: function() {
+//     return (
+//       <div>
+//         <h2>
+//           {this.props.title}
+//         </h2>
+//         {this.props.children}
+//       </div>
+//     );
+//   }
+// });
 
 
-const ArticleBox = React.createClass({
-  render: function() {
-    return (
+// const ArticleBox = React.createClass({
+//   render: function() {
+//     return (
 
-    )
-  }
-})
+//     )
+//   }
+// })
 
 ReactDOM.render(
   <ArticleForm />,

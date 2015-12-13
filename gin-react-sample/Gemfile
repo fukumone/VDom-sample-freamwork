@@ -1,0 +1,7 @@
+source 'https://rubygems.org'
+
+ruby '2.2.3'
+
+gem 'pg'
+gem "activerecord"
+gem 'active_record_migrations'
