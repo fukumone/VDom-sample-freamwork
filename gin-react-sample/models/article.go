@@ -8,8 +8,9 @@ import(
 
 type Article struct {
     Id int64
+    Name string `sql:"size:255"`
     Title string `sql:"size:255"`
-    Link string `sql:"size:255"`
+    Body string `sql:"size:255"`
     CreatedAt time.Time
     UpdatedAT time.Time
 }
@@ -26,7 +27,7 @@ func ArticleValidate(article Article)(error){
 }
 
 func NewArticle(name string, title string, body string) *Article {
-    return &Gallery {
+    return &Article {
         Name: name,
         Title: title,
         Body: body,
