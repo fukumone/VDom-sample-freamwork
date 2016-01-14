@@ -1,5 +1,5 @@
 # VDom-sample-freamwork
 
-・capejsのサンプル
+・gin(golang):reactjsのサンプル
 
-・reactjsのサンプル
+・rails:reactjsのサンプル
